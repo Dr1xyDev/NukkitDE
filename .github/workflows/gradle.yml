@@ -1,30 +1,38 @@
 name: JavaCI
+
 on: [push, pull_request]
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    if: ${{ !contains(github.event.head_commit.message, '[ci skip]')}}
+build:
+runs-on: ubuntu-latest
+if: ${{ !contains(github.event.head_commit.message, '[ci skip]') }}
 
-    steps:
-    - uses: actions/checkout@v4
-    - name: Set up JDK 11
-      uses: actions/setup-java@v4
-      with:
-        java-version: "11"
-        distribution: "temurin"
+steps:
+  - name: Checkout
+    uses: actions/checkout@v4
 
-    - name: Setup Gradle
-      uses: gradle/actions/setup-gradle@v4
+  - name: Set up JDK 11
+    uses: actions/setup-java@v4
+    with:
+      java-version: "11"
+      distribution: temurin
 
-    - name: Perms Gradle
-      run: chmod 777 gradlew
+  - name: Setup Gradle
+    uses: gradle/actions/setup-gradle@v4
 
-    - name: Build with Gradle
-      run: ./gradlew build --no-daemon --no-configuration-cache
+  - name: Perms Gradle
+    run: chmod +x gradlew
 
-    - name: Upload Artifact
-      uses: actions/upload-artifact@v4
-      with:
-        name: Nukkit DE
-        path: build/libs/nukkitDE.jar
+  - name: Build with Gradle
+    run: ./gradlew build --no-daemon --no-configuration-cache
+
+  - name: List generated JARs
+    run: ls -lh build/libs/
+
+  - name: Upload Artifact
+    uses: actions/upload-artifact@v4
+    with:
+      name: Nukkit-DE
+      path: build/libs/*.jar
+      if-no-files-found: error
+      compression-level: 0
