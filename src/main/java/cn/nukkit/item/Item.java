@@ -229,6 +229,7 @@ public class Item implements Cloneable {
     public static final int BIRCH_WOODEN_STAIRS = 135;
     public static final int JUNGLE_WOOD_STAIRS = 136;
     public static final int JUNGLE_WOODEN_STAIRS = 136;
+    public static final int COMMAND_BLOCK = 137;
 
     public static final int BEACON = 138;
     public static final int COBBLE_WALL = 139;
@@ -293,6 +294,8 @@ public class Item implements Cloneable {
     public static final int FENCE_GATE_JUNGLE = 185;
     public static final int FENCE_GATE_DARK_OAK = 186;
     public static final int FENCE_GATE_ACACIA = 187;
+    public static final int REPEATING_COMMAND_BLOCK = 188;
+    public static final int CHAIN_COMMAND_BLOCK = 189;
 
     public static final int SPRUCE_DOOR_BLOCK = 193;
     public static final int BIRCH_DOOR_BLOCK = 194;
@@ -305,11 +308,15 @@ public class Item implements Cloneable {
     public static final int PURPUR_BLOCK = 201;
 
     public static final int PURPUR_STAIRS = 203;
+    public static final int DOUBLE_PURPUR_SLAB = 204;
+    public static final int PURPUR_SLAB = 205;
 
     public static final int END_BRICKS = 206;
+    public static final int ICE_FROSTED = 207;
 
     public static final int END_ROD = 208;
     public static final int END_GATEWAY = 209;
+    public static final int MAGMA_BLOCK = 213;
 
     public static final int BONE_BLOCK = 216;
 
@@ -492,6 +499,8 @@ public class Item implements Cloneable {
     public static final int SPAWN_EGG = 383;
     public static final int EXPERIENCE_BOTTLE = 384;
     public static final int FIRE_CHARGE = 385;
+    public static final int BOOK_AND_QUILL = 386;
+    public static final int WRITTEN_BOOK = 387;
 
     public static final int EMERALD = 388;
     public static final int ITEM_FRAME = 389;
@@ -509,6 +518,8 @@ public class Item implements Cloneable {
     public static final int CARROT_ON_A_STICK = 398;
     public static final int NETHER_STAR = 399;
     public static final int PUMPKIN_PIE = 400;
+    public static final int FIREWORK = 401;
+    public static final int FIREWORK_STAR = 402;
 
     public static final int ENCHANTED_BOOK = 403;
     public static final int ENCHANT_BOOK = 403;
@@ -534,6 +545,7 @@ public class Item implements Cloneable {
     public static final int PRISMARINE_CRYSTALS = 422;
     public static final int RAW_MUTTON = 423;
     public static final int COOKED_MUTTON = 424;
+    public static final int BANNER = 425;
 
     public static final int END_CRYSTAL = 426;
     public static final int SPRUCE_DOOR = 427;
@@ -553,6 +565,8 @@ public class Item implements Cloneable {
 
     public static final int SHULKER_SHELL = 445;
 
+    public static final int TOTEM = 450;
+
     public static final int BEETROOT = 457;
     public static final int BEETROOT_SEEDS = 458;
     public static final int BEETROOT_SEED = 458;
@@ -563,6 +577,8 @@ public class Item implements Cloneable {
     public static final int COOKED_SALMON = 463;
 
     public static final int GOLDEN_APPLE_ENCHANTED = 466;
+
+    public static final int CAMERA = 498;
 
     public static Class[] list = null;
 
@@ -727,36 +743,41 @@ public class Item implements Cloneable {
             list[ROTTEN_FLESH] = ItemRottenFlesh.class; //367
             list[ENDER_PEARL] = ItemEnderPearl.class; //368
             list[BLAZE_ROD] = ItemBlazeRod.class; //369
-            //TODO: list[GHAST_TEAR] = ItemGhastTear.class; //370
+            list[GHAST_TEAR] = ItemGhastTear.class; //370
             list[GOLD_NUGGET] = ItemNuggetGold.class; //371
             list[NETHER_WART] = ItemNetherWart.class; //372
             list[POTION] = ItemPotion.class; //373
             list[GLASS_BOTTLE] = ItemGlassBottle.class; //374
             list[SPIDER_EYE] = ItemSpiderEye.class; //375
-            //TODO: list[FERMENTED_SPIDER_EYE] = ItemSpiderEyeFermented.class; //376
-            //TODO: list[BLAZE_POWDER] = ItemBlazePowder.class; //377
-            //TODO: list[MAGMA_CREAM] = ItemMagmaCream.class; //378
+            list[FERMENTED_SPIDER_EYE] = ItemSpiderEyeFermented.class; //376
+            list[BLAZE_POWDER] = ItemBlazePowder.class; //377
+            list[MAGMA_CREAM] = ItemMagmaCream.class; //378
             list[BREWING_STAND] = ItemBrewingStand.class; //379
             list[CAULDRON] = ItemCauldron.class; //380
             list[ENDER_EYE] = ItemEnderEye.class; //381
-            //TODO: list[GLISTERING_MELON] = ItemMelonGlistering.class; //382
+            list[GLISTERING_MELON] = ItemMelonGlistering.class; //382
             list[SPAWN_EGG] = ItemSpawnEgg.class; //383
             list[EXPERIENCE_BOTTLE] = ItemExpBottle.class; //384
-            //TODO: list[FIRE_CHARGE] = ItemFireCharge.class; //385
+            list[FIRE_CHARGE] = ItemFireCharge.class; //385
+            list[BOOK_AND_QUILL] = ItemBookQuill.class; //386
+            list[WRITTEN_BOOK] = ItemBookWritten.class; //387
 
             list[EMERALD] = ItemEmerald.class; //388
             list[ITEM_FRAME] = ItemItemFrame.class; //389
             list[FLOWER_POT] = ItemFlowerPot.class; //390
             list[CARROT] = ItemCarrot.class; //391
+            list[POTATO] = ItemPotato.class; //392
             list[BAKED_POTATO] = ItemPotatoBaked.class; //393
             list[POISONOUS_POTATO] = ItemPotatoPoisonous.class; //394
-            //TODO: list[EMPTY_MAP] = ItemEmptyMap.class; //395
-            //TODO: list[GOLDEN_CARROT] = ItemCarrotGolden.class; //396
+            list[EMPTY_MAP] = ItemEmptyMap.class; //395
+            list[GOLDEN_CARROT] = ItemCarrotGolden.class; //396
             list[SKULL] = ItemSkull.class; //397
             list[CARROT_ON_A_STICK] = ItemCarrotOnAStick.class; //398
             list[NETHER_STAR] = ItemNetherStar.class; //399
             list[PUMPKIN_PIE] = ItemPumpkinPie.class; //400
 
+            list[FIREWORK] = ItemFirework.class; //401
+            list[FIREWORK_STAR] = ItemFireworkStar.class; //402
             list[ENCHANTED_BOOK] = ItemBookEnchanted.class; //403
             list[COMPARATOR] = ItemRedstoneComparator.class; //404
             list[NETHER_BRICK] = ItemNetherBrick.class; //405
@@ -769,16 +790,17 @@ public class Item implements Cloneable {
             list[COOKED_RABBIT] = ItemRabbitCooked.class; //412
             list[RABBIT_STEW] = ItemRabbitStew.class; //413
             list[RABBIT_FOOT] = ItemRabbitFoot.class; //414
-            //TODO: list[RABBIT_HIDE] = ItemRabbitHide.class; //415
+            list[RABBIT_HIDE] = ItemRabbitHide.class; //415
             list[LEATHER_HORSE_ARMOR] = ItemHorseArmorLeather.class; //416
             list[IRON_HORSE_ARMOR] = ItemHorseArmorIron.class; //417
             list[GOLD_HORSE_ARMOR] = ItemHorseArmorGold.class; //418
             list[DIAMOND_HORSE_ARMOR] = ItemHorseArmorDiamond.class; //419
-            //TODO: list[LEAD] = ItemLead.class; //420
-            //TODO: list[NAME_TAG] = ItemNameTag.class; //421
+            list[LEAD] = ItemLead.class; //420
+            list[NAME_TAG] = ItemNameTag.class; //421
             list[PRISMARINE_CRYSTALS] = ItemPrismarineCrystals.class; //422
             list[RAW_MUTTON] = ItemMuttonRaw.class; //423
             list[COOKED_MUTTON] = ItemMuttonCooked.class; //424
+            list[BANNER] = ItemBanner.class; //425
 
             list[END_CRYSTAL] = ItemEndCrystal.class; //426
             list[SPRUCE_DOOR] = ItemDoorSpruce.class; //427
@@ -787,16 +809,18 @@ public class Item implements Cloneable {
             list[ACACIA_DOOR] = ItemDoorAcacia.class; //430
             list[DARK_OAK_DOOR] = ItemDoorDarkOak.class; //431
             list[CHORUS_FRUIT] = ItemChorusFruit.class; //432
-            //TODO: list[POPPED_CHORUS_FRUIT] = ItemChorusFruitPopped.class; //433
+            list[POPPED_CHORUS_FRUIT] = ItemChorusFruitPopped.class; //433
 
-            //TODO: list[DRAGON_BREATH] = ItemDragonBreath.class; //437
+            list[DRAGON_BREATH] = ItemDragonBreath.class; //437
             list[SPLASH_POTION] = ItemPotionSplash.class; //438
 
-            //TODO: list[LINGERING_POTION] = ItemPotionLingering.class; //441
+            list[LINGERING_POTION] = ItemPotionLingering.class; //441
 
             list[ELYTRA] = ItemElytra.class; //444
 
-            //TODO: list[SHULKER_SHELL] = ItemShulkerShell.class; //445
+            list[SHULKER_SHELL] = ItemShulkerShell.class; //445
+
+            list[TOTEM] = ItemTotem.class; //450
 
             list[BEETROOT] = ItemBeetroot.class; //457
             list[BEETROOT_SEEDS] = ItemSeedsBeetroot.class; //458
@@ -807,6 +831,8 @@ public class Item implements Cloneable {
             list[COOKED_SALMON] = ItemSalmonCooked.class; //463
 
             list[GOLDEN_APPLE_ENCHANTED] = ItemAppleGoldEnchanted.class; //466
+
+            list[CAMERA] = ItemCamera.class; //498
 
             for (int i = 0; i < 256; ++i) {
                 if (Block.list[i] != null) {
@@ -937,6 +963,7 @@ public class Item implements Cloneable {
         addCreativeItem(Item.get(Item.SNOW_BLOCK, 0));
         addCreativeItem(Item.get(Item.END_BRICKS, 0));
         addCreativeItem(Item.get(Item.END_STONE, 0));
+        addCreativeItem(Item.get(Item.MAGMA_BLOCK, 0));
 
         //Decoration
         addCreativeItem(Item.get(Item.BEACON, 0));
@@ -991,6 +1018,9 @@ public class Item implements Cloneable {
         addCreativeItem(Item.get(Item.BOOKSHELF, 0));
         addCreativeItem(Item.get(Item.SIGN, 0));
         addCreativeItem(Item.get(Item.PAINTING, 0));
+        for (int color : dyeColors) {
+            addCreativeItem(Item.get(Item.BANNER, color));
+        }
         addCreativeItem(Item.get(Item.ITEM_FRAME, 0));
         addCreativeItem(Item.get(Item.WORKBENCH, 0));
         addCreativeItem(Item.get(Item.STONECUTTER, 0));
@@ -1002,6 +1032,12 @@ public class Item implements Cloneable {
         addCreativeItem(Item.get(Item.NOTEBLOCK, 0));
         addCreativeItem(Item.get(Item.END_ROD, 0));
         addCreativeItem(Item.get(Item.END_PORTAL_FRAME, 0));
+        for (int color : dyeColors) {
+            addCreativeItem(Item.get(Item.STAINED_GLASS, color));
+        }
+        for (int color : dyeColors) {
+            addCreativeItem(Item.get(Item.STAINED_GLASS_PANE, color));
+        }
         for (int color : dyeColors) {
             addCreativeItem(Item.get(Item.SHULKER_BOX, color));
         }
@@ -1136,6 +1172,7 @@ public class Item implements Cloneable {
         addCreativeItem(Item.get(Item.SHEARS, 0));
         addCreativeItem(Item.get(Item.CLOCK, 0));
         addCreativeItem(Item.get(Item.COMPASS, 0));
+        addCreativeItem(Item.get(Item.CAMERA, 0));
         addCreativeItem(Item.get(Item.MINECART, 0));
         addCreativeItem(Item.get(Item.MINECART_WITH_CHEST, 0));
         addCreativeItem(Item.get(Item.MINECART_WITH_HOPPER, 0));
@@ -1182,6 +1219,8 @@ public class Item implements Cloneable {
         addCreativeItem(Item.get(Item.SPAWN_EGG, 44)); //Zombie Villager
         */
         addCreativeItem(Item.get(Item.FIRE_CHARGE, 0));
+        addCreativeItem(Item.get(Item.FIREWORK, 0));
+        addCreativeItem(Item.get(Item.FIREWORK_STAR, 0));
         addCreativeItem(Item.get(Item.WOODEN_SWORD));
         addCreativeItem(Item.get(Item.WOODEN_HOE));
         addCreativeItem(Item.get(Item.WOODEN_SHOVEL));
@@ -1228,6 +1267,7 @@ public class Item implements Cloneable {
         addCreativeItem(Item.get(Item.GOLD_LEGGINGS));
         addCreativeItem(Item.get(Item.GOLD_BOOTS));
         addCreativeItem(Item.get(Item.ELYTRA));
+        addCreativeItem(Item.get(Item.TOTEM));
         addCreativeItem(Item.get(Item.LEVER));
         addCreativeItem(Item.get(Item.REDSTONE_LAMP));
         addCreativeItem(Item.get(Item.REDSTONE_TORCH));
@@ -1272,6 +1312,7 @@ public class Item implements Cloneable {
         addCreativeItem(Item.get(Item.NETHER_QUARTZ, 0));
         addCreativeItem(Item.get(Item.PAPER, 0));
         addCreativeItem(Item.get(Item.BOOK, 0));
+        addCreativeItem(Item.get(Item.BOOK_AND_QUILL, 0));
         addCreativeItem(Item.get(Item.ARROW, 0));
         addCreativeItem(Item.get(Item.BONE, 0));
         addCreativeItem(Item.get(Item.EMPTY_MAP, 0));

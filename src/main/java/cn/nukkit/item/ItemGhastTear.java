@@ -1,0 +1,19 @@
+package cn.nukkit.item;
+
+/**
+ * Ghast tear, dropped by ghasts and used as a brewing ingredient.
+ */
+public class ItemGhastTear extends Item {
+
+    public ItemGhastTear() {
+        this(0, 1);
+    }
+
+    public ItemGhastTear(Integer meta) {
+        this(meta, 1);
+    }
+
+    public ItemGhastTear(Integer meta, int count) {
+        super(GHAST_TEAR, meta, count, "Ghast Tear");
+    }
+}
